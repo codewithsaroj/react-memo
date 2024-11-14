@@ -20,6 +20,29 @@ const Parent = () => {
   const addTodo = useCallback(() => {
     setTodos((todo) => [...todo, "new todo"]);
   }, [todos]);
+
+  // function handleResize(data) {
+  //   console.log("Window resized", data);
+  // }
+
+  //   // Throttling function
+  //   function throttle(func, delay) {
+  //     let lastCall = 0;
+  //     return function (...args) {
+  //       const now = new Date().getTime();
+  //       if (now - lastCall < delay) {
+  //         return;
+  //       }
+  //       lastCall = now;
+  //       func(...args);
+  //     };
+  //   }
+
+  //   // Throttled event handler
+  //   const throttledHandleResize = throttle(handleResize, 2000);
+
+  //   window.addEventListener("resize", throttledHandleResize);
+
   return (
     <div>
       <p>Expensive Calculation : {expensiveCalculation}</p>
